@@ -2,11 +2,11 @@ const arrayTasks = {
 
 	concat: function (arr1, arr2) {
     const newArray = [];
-    arr1.forEach(function (element) {
-      newArray.push(element);
+    arr1.forEach(function (item) {
+      newArray.push(item);
     })
-    arr2.forEach(function (element) {
-      newArray.push(element);
+    arr2.forEach(function (item) {
+      newArray.push(item);
     })
     return newArray;
 	},
@@ -17,20 +17,20 @@ const arrayTasks = {
 	},
 
 	square: function (arr) {
-    return arr.map(function (number) {
-      return number ** 2;
+    return arr.map(function (value) {
+      return value ** 2;
     });
 	},
 
 	sum: function (arr) {
-    return arr.reduce(function (accumulator, number) {
-      return accumulator + number;
+    return arr.reduce(function (accumulator, value) {
+      return accumulator + value;
     }, 0);
 	},
 
 	removeAndClone: function (arr, valueToRemove) {
-    return arr.filter(function (number) {
-      return (number !== valueToRemove);
+    return arr.filter(function (value) {
+      return (value !== valueToRemove);
     });
 	},
 
@@ -45,12 +45,12 @@ const arrayTasks = {
 	},
 
 	sumOfAllEvenNumbersSquared: function (arr) {
-    return arr.filter(function (number) {
-      return number % 2 === 0;
-    }).map(function (number) {
-      return number ** 2;
-    }).reduce(function (accumulator, number) {
-      return accumulator + number;
+    return arr.filter(function (value) {
+      return value % 2 === 0;
+    }).map(function (value) {
+      return value ** 2;
+    }).reduce(function (accumulator, value) {
+      return accumulator + value;
     });
 	},
 
@@ -58,13 +58,13 @@ const arrayTasks = {
 
 	findDuplicates: function (arr) {
     newArray = [];
-    arr.forEach(function (numberToCheck) {
-      const filtered = arr.filter(function (number) {
-        return number === numberToCheck;
+    arr.forEach(function (itemToCheck) {
+      const filtered = arr.filter(function (item) {
+        return item === itemToCheck;
       })
       if (filtered.length > 1) {
-        if (newArray.indexOf(numberToCheck) === -1) {
-          newArray.push(numberToCheck);
+        if (newArray.indexOf(itemToCheck) === -1) {
+          newArray.push(itemToCheck);
         }
       }
     });
