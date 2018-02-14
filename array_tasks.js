@@ -35,7 +35,7 @@ const arrayTasks = {
 	},
 
 	findIndexesOf: function (arr, itemToFind) {
-    newArray = [];
+    const newArray = [];
     arr.forEach(function (item, index) {
       if (item === itemToFind) {
         newArray.push(index);
@@ -44,9 +44,15 @@ const arrayTasks = {
     return newArray;
 	},
 
-	// sumOfAllEvenNumbersSquared: function (arr) {
-
-	// }
+	sumOfAllEvenNumbersSquared: function (arr) {
+    return arr.filter(function (number) {
+      return number % 2 === 0;
+    }).map(function (number) {
+      return number ** 2;
+    }).reduce(function (accumulator, number) {
+      return accumulator + number;
+    });
+	}
 
 	// ----------- EXTENSION ------------
 
