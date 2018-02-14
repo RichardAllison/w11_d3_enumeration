@@ -1,8 +1,15 @@
 const arrayTasks = {
 
-	// concat: function (arr1, arr2) {
-
-	// },
+	concat: function (arr1, arr2) {
+    const newArray = [];
+    arr1.forEach(function (element) {
+      newArray.push(element);
+    })
+    arr2.forEach(function (element) {
+      newArray.push(element);
+    })
+    return newArray;
+	},
 
 	// insertAt: function (arr, itemToAdd, index) {
 
