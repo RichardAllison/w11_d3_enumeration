@@ -22,9 +22,11 @@ const arrayTasks = {
     });
 	},
 
-	// sum: function (arr) {
-
-	// },
+	sum: function (arr) {
+    return arr.reduce(function (accumulator, number) {
+      return accumulator + number;
+    }, 0);
+	},
 
 	// removeAndClone: function (arr, valueToRemove) {
 
