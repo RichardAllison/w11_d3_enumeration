@@ -52,13 +52,24 @@ const arrayTasks = {
     }).reduce(function (accumulator, number) {
       return accumulator + number;
     });
-	}
+	},
 
 	// ----------- EXTENSION ------------
 
-	// findDuplicates: function (arr) {
-
-	// },
+	findDuplicates: function (arr) {
+    newArray = [];
+    arr.forEach(function (numberToCheck) {
+      const filtered = arr.filter(function (number) {
+        return number === numberToCheck;
+      })
+      if (filtered.length > 1) {
+        if (newArray.indexOf(numberToCheck) === -1) {
+          newArray.push(numberToCheck);
+        }
+      }
+    });
+    return newArray;
+	}
 
 }
 
